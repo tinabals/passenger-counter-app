@@ -1,5 +1,7 @@
 let saveEl = document.getElementById("save-el")
 let countEl = document.getElementById("count-el")
+let clearEl = document.getElementById("clear")
+clearEl.addEventListener("click", clear)
 let count = 0
 
 function increment() {
@@ -12,4 +14,8 @@ function save() {
     saveEl.textContent += countStr
     countEl.textContent = 0
     count = 0
+}
+
+function clear(){
+   saveEl.textContent = "Previous enteries: "
 }
